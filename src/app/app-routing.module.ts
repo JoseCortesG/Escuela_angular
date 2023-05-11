@@ -1,10 +1,25 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { PerfilAlumnoComponent } from './components/perfil-alumno/perfil-alumno.component';
+import { LoginComponent } from './components/login/login.component';
+import { BackNotasComponent } from './components/back-notas/back-notas.component';
+import { NotificacionesComponent } from './components/notificaciones/notificaciones.component';
+import { Route, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+
+//Rutas
+const routes: Routes = [
+  {path:'login',component: LoginComponent},
+  {path: 'perfil', component: PerfilAlumnoComponent},
+  {path: 'back-notas', component: BackNotasComponent},
+  {path:'notificaciones',component:NotificacionesComponent}
+
+]
+
 
 @NgModule({
+
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports:[RouterModule]
 })
 export class AppRoutingModule { }
