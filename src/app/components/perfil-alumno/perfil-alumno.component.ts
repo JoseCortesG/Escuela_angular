@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ASIGNATURAS, asignatura} from 'src/app/asignaturas';
+
+
 
 @Component({
   selector: 'app-perfil-alumno',
@@ -6,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil-alumno.component.css']
 })
 export class PerfilAlumnoComponent {
+  asignaturas: asignatura [] = ASIGNATURAS;
 
 }

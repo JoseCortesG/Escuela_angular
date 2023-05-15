@@ -8,6 +8,8 @@ import { NotificacionesComponent } from './components/notificaciones/notificacio
 import { BackNotasComponent } from './components/back-notas/back-notas.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

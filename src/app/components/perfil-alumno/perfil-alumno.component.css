@@ -439,7 +439,7 @@ body {
   width: 100%;
   height: 75%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -454,65 +454,46 @@ body {
   width: 0;
 }
 
-.fila-uno {
-  margin-top: 0.1%;
-  width: 100%;
-  height: 33%;
-  display: flex;
-  flex-wrap: nowrap;
-}
+/*////////////////FILAS TABLA//////////*/
 
-.fila-uno div {
-  width: 33.34%;
-  height: 100%;
-  background-color: #e6e4e4;
-  margin: 0.2%;
-}
-
-.fila-uno div:hover {
-  background-color: #ac0a0a;
-  opacity: 80%;
-}
-
-.fila-dos {
-  width: 100%;
-  height: 33%;
-
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.fila-dos div {
-  width: 33.34%;
+.columna-tabla-primera{
+  width: 32.9%;
   height: 100%;
   background-color: #c4bfbf;
-  margin: 0.2%;
+  
 }
 
-.fila-dos div:hover {
-  background-color: #ac0a0a;
-  opacity: 80%;
-}
 
-.fila-tres {
-  width: 100%;
-  height: 33%;
 
-  display: flex;
-  flex-wrap: nowrap;
-  margin-bottom: 0.5%;
-}
-.fila-tres div {
-  width: 33.34%;
+.columna-tabla-segunda{
+  width: 33%;
   height: 100%;
   background-color: #e6e4e4;
-  margin: 0.2%;
+  
+
 }
 
-.fila-tres div:hover {
-  background-color: #ac0a0a;
-  opacity: 80%;
+.columna-tabla-segunda div{
+  height: 13%;
+  justify-content: start;
+  margin-left: 50px;
+
+  
 }
+.columna-tabla-tercera{
+  width: 33%;
+  height: 100%;
+  background-color: #c4bfbf;
+
+
+}
+
+
+
+
+
+
+
 
 #media-porcentaje {
   display: flex;

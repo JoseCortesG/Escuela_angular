@@ -1,1 +1,25 @@
-<p>back-notas works!</p>
+
+<div *ngFor="let usuario of usuarios">
+    <h2>{{ usuario.nombre }}</h2>
+    <p> Nombre: {{usuario.nombre}}</p>
+    <p>Apellidos: {{ usuario.apellidos }}</p>
+    <p>Usuario: {{ usuario.usuario }}</p>
+    <p> DNI: {{usuario.dni}}</p>
+    <p>Contraseña: {{usuario.password}}</p>
+    <p>Dirección: {{usuario.direccion}}</p>
+    <p>Teléfono: {{usuario.telefono}}</p>
+    <p> Tipo Alumnno:{{usuario.tipo_usuario}}</p>
+    <p> Activo: {{usuario.activo}}</p>
+
+  
+  </div>
+  
+  <div *ngFor="let asignatura of asignaturas">
+    <h2>{{ asignatura.nombre }}</h2>
+    <p> Nombre: {{asignatura.nombre}}</p>
+    <p>ID profesor: {{ asignatura.id_profesor1}}</p>
+   
+
+  
+  </div>
+  
