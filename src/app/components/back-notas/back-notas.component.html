@@ -1,25 +1,44 @@
 
-<div *ngFor="let usuario of usuarios">
-    <h2>{{ usuario.nombre }}</h2>
-    <p> Nombre: {{usuario.nombre}}</p>
-    <p>Apellidos: {{ usuario.apellidos }}</p>
-    <p>Usuario: {{ usuario.usuario }}</p>
-    <p> DNI: {{usuario.dni}}</p>
-    <p>Contraseña: {{usuario.password}}</p>
-    <p>Dirección: {{usuario.direccion}}</p>
-    <p>Teléfono: {{usuario.telefono}}</p>
-    <p> Tipo Alumnno:{{usuario.tipo_usuario}}</p>
-    <p> Activo: {{usuario.activo}}</p>
+<main>
+  <table *ngFor="let usuario of usuarios">
+    <th>
+      <h2>{{ usuario.nombre }} {{ usuario.apellidos }}</h2>
+    </th>
+    <tr>
+      <td>
+        <p>Usuario: {{ usuario.usuario }}</p>
+      </td>
+      <td>
+        <p> DNI: {{usuario.dni}}</p>
+      </td>
+     
+    </tr>
+    <tr class="filapar">
+      <td>
+        <p>Contraseña: {{usuario.password}}</p>
+      </td>
+      <td>
+        <p>Dirección: {{usuario.direccion}}</p>
+  
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Teléfono: {{usuario.telefono}}</p>
+      </td>
+      <td>
+        <p> Tipo Alumnno:{{usuario.tipo_usuario}}</p>
+      </td>
+    </tr>
+    <tr class="filapar">
+      <td>
+        <p> Activo: {{usuario.activo}}</p>
+  
+      </td>
+    </tr>
+  
+  
+  
+  </table>
 
-  
-  </div>
-  
-  <div *ngFor="let asignatura of asignaturas">
-    <h2>{{ asignatura.nombre }}</h2>
-    <p> Nombre: {{asignatura.nombre}}</p>
-    <p>ID profesor: {{ asignatura.id_profesor1}}</p>
-   
-
-  
-  </div>
-  
+</main>
