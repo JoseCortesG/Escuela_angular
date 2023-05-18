@@ -1,16 +1,16 @@
 <main id="container">
 
 
-  
-  <div id="notas">
-    <div id="tabla">
 
-      <div id="cabecera-tabla">
+  <div id="notas">
+    <div id="tabla" *ngIf="contenidoVisibleTabla">
+      <div id="cabecera-tabla" >
         <div>CURSO</div>
         <div>ASIGNATURA</div>
         <div>NOTA</div>
       </div>
-      <div id="cuerpo-tabla">
+
+      <div id="cuerpo-tabla" >
         <div class="columna-tabla-primera"> </div>
         <div class="columna-tabla-segunda">
           <div *ngFor="let asignatura of asignaturas">
@@ -18,13 +18,13 @@
           </div>
         </div>
         <div class="columna-tabla-tercera"></div>
-        
-
-        
-
       </div>
+    </div>
 
-      <div id="media-porcentaje">
+
+
+
+      <div id="media-porcentaje" *ngIf="contenidoVisible">
         <div id="media">
           <div>NOTA MEDIA</div>
           <div role="progreso" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value: 90"></div>
@@ -34,9 +34,10 @@
           <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
         </div>
       </div>
-      <div id="media-porcentaje-fondo"></div>
+      <div id="media-porcentaje-fondo" *ngIf="contenidoVisible"></div>
     </div>
-  </div>
+  
+
 
   <footer id="footer">
     <nav id="menu-footer">
@@ -58,5 +59,9 @@
     </nav>
   </footer>
 
-  <button id="boton-deslizar" onclick="deslizar();"></button>
+  <button id="boton-deslizar" (click)="toggle()"></button>
+
+
+
+
 </main>

@@ -6,8 +6,8 @@
   justify-content: center;
   background-color: rgb(125, 125, 125);
   margin-top: 30rem;
-
   z-index: 0;
+ 
 }
 
 #login {
@@ -26,6 +26,8 @@
   height: 92%;
   width: 25%;
   z-index: 1;
+ 
+
 }
 
 #foto {
