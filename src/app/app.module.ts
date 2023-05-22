@@ -7,6 +7,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NotificacionesComponent } from './components/notificaciones/notificaciones.component';
 import { BackNotasComponent } from './components/back-notas/back-notas.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { MensajeComponent } from './mensaje/mensaje.component';
 
 
 
@@ -16,7 +18,9 @@ import { AppRoutingModule } from './app-routing.module';
     PerfilAlumnoComponent,
     LoginComponent,
     NotificacionesComponent,
-    BackNotasComponent
+    BackNotasComponent,
+    UsuarioComponent,
+    MensajeComponent
   ],
   imports: [
     BrowserModule,

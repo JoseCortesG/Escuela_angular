@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { ASIGNATURAS, asignatura } from 'src/app/asignaturas';
+import { usuario } from 'src/app/usuarios';
+
+import { USUARIOS } from 'src/app/listaUsuarios';
+import { asignatura} from 'src/app/asignaturas';
+import { ASIGNATURAS } from 'src/app/listaAsignaturas';
+
 
 @Component({
   selector: 'app-perfil-alumno',
