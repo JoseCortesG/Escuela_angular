@@ -18,8 +18,6 @@ USUARIOS : any =[];
         .subscribe(this.USUARIOS = this.USUARIOS);
   }
 
- 
-
   ngOnInit(): void {
     this.getUSUARIOS();
   }
