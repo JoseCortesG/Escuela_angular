@@ -9,6 +9,9 @@ import { BackNotasComponent } from './components/back-notas/back-notas.component
 import { AppRoutingModule } from './app-routing.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { MensajeComponent } from './mensaje/mensaje.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service'; 
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,7 +27,14 @@ import { MensajeComponent } from './mensaje/mensaje.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    //Esto lo tenemos que quitar cuando llamemos al servidor real
+    //porque se pone en  medio de la llamada...
+    HttpClientInMemoryWebApiModule.forRoot(
+    InMemoryDataService, { dataEncapsulation: false }
+)
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

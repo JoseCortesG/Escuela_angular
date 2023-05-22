@@ -7,23 +7,27 @@ import { MessageService } from './mensaje.service';
 import { Observable, of } from 'rxjs';
 import { USUARIOS } from './listaUsuarios';
 
-
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsuariosService {
-  getUSUARIOS(): Observable < usuario[] > {
-    const observableUsuarios = of(USUARIOS);
-
-this.messageService.add('Servicio de Usuarios: Usuarios recuperados');
-return observableUsuarios;
-
+  private usuariosUrl = 'api/usuarios';
+  private log(message: string) {
+    this.messageService.add(`UsuariosService : ${message}`);
   }
 
-  constructor (private messageService: MessageService){}
-     
+  getUSUARIOS(): Observable<usuario[]> {
+    //Cambiamos la llamada de la lista de usuarios local por la llamada HTTP
+
+
+
+
+    this.messageService.add('Servicio de Usuarios: Usuarios recuperados');
+    return this.http.get<usuario[]>(this.usuariosUrl);
   }
 
- 
- 
+  constructor(
+    private http: HttpClient,
+    private messageService: MessageService
+  ) {}
+}
