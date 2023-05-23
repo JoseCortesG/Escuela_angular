@@ -1,17 +1,14 @@
 <main id="container">
-
-
-
   <div id="notas">
     <div id="tabla" *ngIf="contenidoVisibleTabla">
-      <div id="cabecera-tabla" >
+      <div id="cabecera-tabla">
         <div>CURSO</div>
         <div>ASIGNATURA</div>
         <div>NOTA</div>
       </div>
 
-      <div id="cuerpo-tabla" >
-        <div class="columna-tabla-primera"> </div>
+      <div id="cuerpo-tabla">
+        <div class="columna-tabla-primera"></div>
         <div class="columna-tabla-segunda">
           <div *ngFor="let asignatura of asignaturas">
             <h2>{{ asignatura.nombre }}</h2>
@@ -21,53 +18,58 @@
       </div>
     </div>
 
-
-
-
-      <div id="media-porcentaje" *ngIf="contenidoVisible">
-        <div id="media">
-          <div>NOTA MEDIA</div>
-          <div role="progreso" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="--value: 90"></div>
-        </div>
-        <div class="circulo" id="porcentaje">
-          <div>PORCENTAJE</div>
-          <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 67"></div>
-        </div>
+    <div id="media-porcentaje" *ngIf="contenidoVisible">
+      <div id="media">
+        <div>NOTA MEDIA</div>
+        <div
+          role="progreso"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 90"
+        ></div>
       </div>
-      <div id="media-porcentaje-fondo" *ngIf="contenidoVisible"></div>
+      <div class="circulo" id="porcentaje">
+        <div>PORCENTAJE</div>
+        <div
+          role="progressbar"
+          aria-valuenow="67"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="--value: 67"
+        ></div>
+      </div>
     </div>
+    <div id="media-porcentaje-fondo" *ngIf="contenidoVisible"></div>
+  </div>
 
-    <table id="informacion-alumno" *ngIf="contenidoVisible">
-      <th><h2>
-        INFORMACIÓN DEL ALUMNO
-  
-      </h2></th>
-      <tr class="filapar">
-        <td><p>Nombre Completo</p></td>
-        <td><p>Jose Cortés</p></td>
-      </tr>
-  
-      <tr>
-        <td><p>DNI</p></td>
-        <td></td>
-      </tr>
-      <tr class="filapar">
-        <td><p> Teléfono</p></td>
-        <td><p></p></td>
-      </tr>
-      <tr>
-        <td>Email</td>
-        <td><p></p></td>
-      </tr>
-    </table>
-  
+  <table id="informacion-alumno" *ngIf="contenidoVisible">
+    <th><h2>INFORMACIÓN DEL ALUMNO</h2></th>
+    <tr class="filapar">
+      <td><p>Nombre Completo</p></td>
+      <td><p>Jose Cortés</p></td>
+    </tr>
 
+    <tr>
+      <td><p>DNI</p></td>
+      <td></td>
+    </tr>
+    <tr class="filapar">
+      <td><p>Teléfono</p></td>
+      <td><p></p></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><p></p></td>
+    </tr>
+  </table>
 
   <footer id="footer">
     <nav id="menu-footer">
       <ul>
         <li>
-          <a href="../notificaciones/index.html"><img src="/assets/imagenesEscuela/alert-26.png" />
+          <a href="../notificaciones/index.html"
+            ><img src="/assets/imagenesEscuela/alert-26.png" />
           </a>
         </li>
         <li>
@@ -77,15 +79,16 @@
           <a><img src="/assets/imagenesEscuela/lupa.png" /> </a>
         </li>
         <li>
-          <a><img src="/assets/imagenesEscuela/sms.png" /> </a>
+          <a routerLink="mensaje"
+            ><img src="/assets/imagenesEscuela/sms.png" />
+          </a>
         </li>
       </ul>
     </nav>
   </footer>
+<!--
+   <button id="boton-deslizar" (click)="toggle()"></button>
 
-  <button id="boton-deslizar" (click)="toggle()"></button>
-
-
-
-
+-->
+ 
 </main>

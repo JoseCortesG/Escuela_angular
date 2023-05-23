@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'perfil', component: PerfilAlumnoComponent},
   {path: 'back-notas', component: BackNotasComponent},
   {path:'notificaciones',component:NotificacionesComponent},
-  {path:'alumnos',component:UsuarioComponent},
+  {path:'usuario',component:UsuarioComponent},
 
 
 ]

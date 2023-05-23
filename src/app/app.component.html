@@ -2,7 +2,12 @@
     <div id="nombre">
       <h1>JOSÉ CORTÉS GIMÉNEZ</h1>
     </div>
-    <div id="perfil"> <img src="/assets/imagenesEscuela/usuario.png" /> </div>
+    <div id="perfil"><a routerLink="usuario">
+      <img src="/assets/imagenesEscuela/usuario.png" />
+
+    </a>
+      
+       </div>
   </header>
   <input type="checkbox" name="" id="side-menu-switch" />
 
@@ -12,7 +17,8 @@
         <li><a routerLink="login">LOG IN</a></li>
         <li><a routerLink="perfil">PERFIL</a></li>
         <li><a routerLink="back-notas">NOTAS</a></li>
-        <li><a routerLink="alumnos"> ALUMNOS </a></li>
+        
+        
       </ul>
     </nav>
 
@@ -100,4 +106,10 @@
   </div>
 
 <router-outlet></router-outlet>
-<app-mensaje></app-mensaje>
+
+<!--
+  <app-mensaje></app-mensaje>
+
+-->
+
+
